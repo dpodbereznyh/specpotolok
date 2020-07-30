@@ -156,10 +156,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 // Main menu box
 .sm-clean {
-	//background: $sm-clean__collapsible-bg;
-	//border-radius: $sm-clean__collapsible-border-radius;
-
-	// Main menu items
+		// Main menu items
 	a {
 		&,
 		&:hover,
@@ -213,7 +210,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// Sub menus box
 	ul {
-		background: $sm-clean__collapsible-sub-bg;
+		//background: $sm-clean__collapsible-sub-bg;
 
 		// Sub menus items
 		a {
@@ -221,9 +218,8 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:hover,
 			&:focus,
 			&:active {
-				font-size: $sm-clean__font-size-small;
+				//font-size: $sm-clean__font-size-small;
 				// add indentation for sub menus text
-				border-left: $sm-clean__collapsible-sub-item-indentation solid transparent;
 			}
 		}
 
@@ -339,11 +335,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 		// Sub menus box
 		ul {
-			border: $sm-clean__border-width solid $sm-clean__desktop-sub-border-color;
-			padding: $sm-clean__desktop-sub-padding-vertical $sm-clean__desktop-sub-padding-horizontal;
-			background: $sm-clean__desktop-sub-bg;
+			//border: $sm-clean__border-width solid $sm-clean__desktop-sub-border-color;
+			//padding: $sm-clean__desktop-sub-padding-vertical $sm-clean__desktop-sub-padding-horizontal;
+			//background: $sm-clean__desktop-sub-bg;
 			//border-radius: $sm-clean__desktop-sub-border-radius !important;
-			box-shadow: $sm-clean__desktop-sub-box-shadow;
+			//box-shadow: $sm-clean__desktop-sub-box-shadow;
 
 			// Sub menus items
 			a {
