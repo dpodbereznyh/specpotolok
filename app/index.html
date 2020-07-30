@@ -18,47 +18,208 @@
 <body>
 <main class="main">
     <header class="header">
-        <ul class="header__top_nav">
-            <li class="header__top_nav_item">
-                <a href="/" class="header__logo">
-                    <img src="" alt="">
-                </a>
-            </li>
-            <li class="header__top_nav_item">
-                <ul class="header__top_nav_address">
-                    <li class="header__top_nav_address-item">
-                        <span></span>
-                        <p></p>
-                    </li>
-                    <li class="header__top_nav_address-item">
-                        <span></span>
-                        <p></p>
-                    </li>
-                </ul>
-            </li>
-            <li class="header__top_nav_item">
-                <ul class="header__top_nav_phone">
-                    <li class="header__top_nav_phone-item">
-                        <span></span>
-                        <a href="#"></a>
-                    </li>
-                    <li class="header__top_nav_phone-item">
-                        <span></span>
-                        <a href="#"></a>
-                    </li>
-                </ul>
-            </li>
-            <li class="header__top_nav_item">
-                <ul class="header__top_nav_feedback">
-                    <li class="header__top_nav_feedback-item header__top_nav_feedback-item-mail">
-                        <a href="#"></a>
-                    </li>
-                    <li class="header__top_nav_feedback-item header__top_nav_feedback-item-btn">
-                        <a href="#"></a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <div class="container-fluid">
+            <ul class="header__top_nav">
+                <li class="header__top_nav_item">
+                    <a href="/" class="header__logo">
+                        <img src="../img/header/header-logo.svg" alt="СПЕЦПОТОЛОК">
+                    </a>
+                </li>
+                <li class="header__top_nav_item">
+                    <ul class="header__top_nav_address">
+                        <li class="header__top_nav_address-item">
+                            <div class="header__top_nav_item-icon">
+                                <img src="../img/header/header-location-icon.svg" alt="">
+                            </div>
+                            <p class="h6">
+                                г.Владимир, пр-кт Ленина, 73
+                            </p>
+                        </li>
+                        <li class="header__top_nav_address-item">
+                            <div class="header__top_nav_item-icon">
+                                <img src="../img/header/header-clock-icon.svg" alt="">
+                            </div>
+                            <p class="h6">
+                                Режим работы<br>
+                                пн-пт с 9.00 - 19.00
+                            </p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__top_nav_item">
+                    <ul class="header__top_nav_phone">
+                        <li class="header__top_nav_phone-item">
+                            <div class="header__top_nav_item-icon">
+                                <img src="../img/header/header-phone-icon.svg" alt="">
+                            </div>
+                            <a href="tel:+79910974575" class="h6">
+                                +7 (991) 097-45-75
+                            </a>
+                        </li>
+                        <li class="header__top_nav_phone-item">
+                            <div class="header__top_nav_item-icon">
+                                <img src="../img/header/header-phone-icon.svg" alt="">
+                            </div>
+                            <a href="tel:+74922552323" class="h6">
+                                +7 (4922) 55-23-23
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__top_nav_item">
+                    <ul class="header__top_nav_feedback">
+                        <li class="header__top_nav_feedback-item header__top_nav_feedback-item-mail">
+                            <div class="header__top_nav_item-icon">
+                                <img src="../img/header/header-envelope-icon.svg" alt="">
+                            </div>
+                            <a href="mailto:zakaz@specpotolok.ru" class="h6">
+                                zakaz@specpotolok.ru
+                            </a>
+                        </li>
+                        <li class="header__top_nav_feedback-item header__top_nav_feedback-item-btn">
+                            <a href="#" class="btn small">
+                                ВЫЗОВ ЗАМЕРЩИКА
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="header__main_nav">
+            <div class="container-fluid">
+                <nav class="main-nav" role="navigation">
+
+                    <!-- Mobile menu toggle button (hamburger/x icon) -->
+                    <input id="main-menu-state" type="checkbox" />
+                    <label class="main-menu-btn" for="main-menu-state">
+                        <span class="main-menu-btn-icon"></span> Toggle main menu visibility
+                    </label>
+                    <!-- Sample menu definition -->
+                    <ul id="main-menu" class="sm sm-clean">
+                        <li class="main-menu__catalog_wrap">
+                            <a href="#" class="main-menu__catalog_btn">
+                                <img class="main-menu__catalog_btn_icon" src="../img/header/catalog-bars-icon.svg" alt="">
+                                <p class="main-menu__catalog_btn_title h3">
+                                    Каталог потолков
+                                </p>
+                            </a>
+                            <ul class="main-menu__category_list">
+                                <li class="main-menu__category_item">
+                                    <a href="#" class="main-menu__category_item-link">
+                                        <span class="icon-catalog-material-icon catalog-title-icon">
+
+                                        </span>
+                                        <p class="main-menu__category_item-title">
+                                            По материалу
+                                        </p>
+                                        <span class="icon-catalog-arrow-right">
+                                            &#xe903;
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="main-menu__category_item">
+                                    <a href="#" class="main-menu__category_item-link">
+                                        <span class="icon-catalog-surface-icon catalog-title-icon">
+                                           &#xe904;
+                                        </span>
+                                        <p class="main-menu__category_item-title">
+                                            По типу поверхности
+                                        </p>
+                                        <span class="icon-catalog-arrow-right">
+                                            &#xe903;
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="main-menu__category_item">
+                                    <a href="#" class="main-menu__category_item-link">
+                                        <span class="icon-catalog-fulfilment-icon catalog-title-icon">
+                                           &#xe905;
+                                        </span>
+                                        <p class="main-menu__category_item-title">
+                                            По исполнению
+                                        </p>
+                                        <span class="icon-catalog-arrow-right">
+                                            &#xe903;
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="main-menu__category_item">
+                                    <a href="#" class="main-menu__category_item-link">
+                                        <span class="icon-catalog-surface-icon catalog-title-icon">
+                                           &#xe904;
+                                        </span>
+                                        <p class="main-menu__category_item-title">
+                                            По применению
+                                        </p>
+                                        <span class="icon-catalog-arrow-right">
+                                            &#xe903;
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="main-menu__category_item">
+                                    <a href="#" class="main-menu__category_item-link">
+                                        <span class="icon-catalog-surface-icon catalog-title-icon">
+                                           &#xe904;
+                                        </span>
+                                        <p class="main-menu__category_item-title">
+                                            По цвету
+                                        </p>
+                                        <span class="icon-catalog-arrow-right">
+                                            &#xe903;
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="main-menu__category_item">
+                                    <a href="#" class="main-menu__category_item-link">
+                                        <span class="icon-catalog-surface-icon catalog-title-icon">
+                                           &#xe904;
+                                        </span>
+                                        <p class="main-menu__category_item-title">
+                                            По городам
+                                        </p>
+                                        <span class="icon-catalog-arrow-right">
+                                            &#xe903;
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="base-font">
+                            <a href="#">
+                                Светильники
+                            </a>
+                        </li>
+                        <li class="base-font">
+                            <a href="#">
+                                Цены
+                            </a>
+                        </li>
+                        <li class="base-font">
+                            <a href="#">
+                                Акции
+                            </a>
+                        </li>
+                        <li class="base-font">
+                            <a href="#">
+                                Наши работы
+                            </a>
+                        </li>
+                        <li class="base-font">
+                            <a href="#">
+                                О компании
+                            </a>
+                        </li>
+                        <li class="base-font">
+                            <a href="#">
+                                Контакты
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 </main>
 <footer class="footer" id="footer">

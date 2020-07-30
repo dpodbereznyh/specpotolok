@@ -1,0 +1,44 @@
+$light: #ffffff;
+$dark: #333333;
+$dark_1: lighten($dark, 5%);
+$dark_2: lighten($dark, 10%);
+$dark_3: lighten($dark, 20%);
+$dark_4: lighten($dark, 30%);
+$dark_5: lighten($dark, 40%);
+$dark_6: lighten($dark, 50%);
+$dark_7: lighten($dark, 60%);
+$dark_8: lighten($dark, 70%);
+$dark_9: lighten($dark, 80%);
+
+$orange: #FF7C24;
+$orange_l1: lighten($orange, 10%);
+$orange_l2: lighten($orange, 20%);
+$orange_l3: lighten($orange, 30%);
+$orange_l4: lighten($orange, 35%);
+
+$orange_d1: darken($orange, 5%);
+$orange_d2: darken($orange, 10%);
+$orange-d3: darken($orange, 15%);
+$orange_d4: darken($orange, 20%);
+
+$color_blue_default: #7092B9;
+$color_blue_lighten_1: lighten($color_blue_default, 5%);
+$color_blue_lighten_2: lighten($color_blue_default, 10%);
+$color_blue_lighten_3: lighten($color_blue_default, 15%);
+$color_blue_lighten_4: lighten($color_blue_default, 20%);
+
+$color_blue_darken_1: darken($color_blue_default, 5%);
+$color_blue_darken_2: darken($color_blue_default, 10%);
+$color_blue_darken_3: darken($color_blue_default, 15%);
+$color_blue_darken_4: darken($color_blue_default, 20%);
+
+$color_aqua_default: #6EC1DC;
+$color_aqua_lighten_1: lighten($color_aqua_default, 10%);
+$color_aqua_lighten_2: lighten($color_aqua_default, 15%);
+$color_aqua_lighten_3: lighten($color_aqua_default, 20%);
+$color_aqua_lighten_4: lighten($color_aqua_default, 25%);
+
+$color_aqua_darken_1: darken($color_aqua_default, 5%);
+$color_aqua_darken_2: darken($color_aqua_default, 10%);
+$color_aqua_darken_3: darken($color_aqua_default, 15%);
+$color_aqua_darken_4: darken($color_aqua_default, 20%);
