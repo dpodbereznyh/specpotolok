@@ -1,3 +1,24 @@
+.section {
+  margin-bottom: 64px;
+  &__title {
+    color: $dark;
+    margin-bottom: 32px;
+    margin-left: 16px;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $orange;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-16px, -50%);
+    }
+  }
+}
 .main-screen {
   &__title {
     font-style: normal;
@@ -86,7 +107,31 @@
     display: block;
   }
 }
-
 .swiper-button-disabled {
   opacity: .5;
+}
+
+//Aadvantages
+
+.advantages {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__item_icon {
+    width: 59px;
+    height: 59px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item_text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: $dark;
+  }
 }
