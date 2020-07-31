@@ -4,6 +4,7 @@
   &__nav_list {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 84px;
   }
   &__nav_item {
     width: fit-content;
@@ -68,5 +69,19 @@
     p {
       color: $light;
     }
+  }
+}
+.copyright {
+  margin: 0 auto 8px;
+  width: fit-content;
+  a {
+    color: $light;
+  }
+}
+.develope {
+  margin: 0 auto;
+  width: fit-content;
+  a {
+    color: $light;
   }
 }
