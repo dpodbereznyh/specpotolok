@@ -36,11 +36,14 @@ var mainSlider = new Swiper ('.main-screen__swiper-container', {
     slideClass: 'main-screen__swiper-slide',
     wrapperClass: 'main-screen__swiper-wrapper',
     slidesPerView: 1,
+    autoHeight: true,
+    lazy: true,
     lazy: {
         loadPrevNext: true,
+        watchSlidesVisibility: true,
     },
     pagination: {
-        el: 'swiper-pagination',
+        el: '.main-screen__swiper-pagination',
         type: 'bullets',
         clickable: true,
         bulletClass: 'main-screen__swiper_bullet',
