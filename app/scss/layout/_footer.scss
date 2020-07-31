@@ -1,0 +1,72 @@
+.footer {
+  background: $dark;
+  padding: 32px 0;
+  &__nav_list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav_item {
+    width: fit-content;
+  }
+  &__nav_info_title {
+    margin-bottom: 16px;
+    color: $light;
+  }
+  &__nav_info_item {
+    margin-bottom: 8px;
+    a {
+      color: $light;
+      transition: .35s;
+      &:hover {
+        color: $orange-d3;
+        transition: .35s;
+      }
+    }
+  }
+  &__nav_catalog_list {
+    width: fit-content;
+  }
+  &__nav_catalog_title {
+    margin-bottom: 16px;
+    color: $light;
+  }
+  &__nav_catalog_item {
+    margin-bottom: 8px;
+    width: fit-content;
+    a {
+      color: $light;
+      transition: .35s;
+      &:hover {
+        color: $orange-d3;
+        transition: .35s;
+      }
+    }
+  }
+  &__contacts_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+      color: $light;
+    }
+    a {
+      color: $light;
+    }
+  }
+  &__contacts_item_icon {
+    width: 17px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+  }
+  &__logo {
+    max-width: 323px;
+    a {
+      display: block;
+      margin-bottom: 32px;
+    }
+    p {
+      color: $light;
+    }
+  }
+}
