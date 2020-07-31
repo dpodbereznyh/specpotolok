@@ -24,7 +24,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-slider-prev-icon:before {
+  content: "\e908";
 
+}
+.icon-slider-next-icon:before {
+  content: "\e907";
+}
 .icon-catalog-location-icon:before {
   content: "\e900";
 }
