@@ -178,38 +178,62 @@
   }
 }
 
-//Geography
-.geography {
-  &__wrap {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__image {
-    max-width: 735px;
-  }
-  &__form_wrap {
-    padding: 32px;
-    max-width: 439px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 0.5px solid $dark;
-  }
-  &__form_title {
-    display: flex;
-    margin: 0 auto 32px;
-  }
-  &__form_title_icon {
-    width: 18px;
-    height: 23px;
-    margin-right: 16px;
+//Gallery
+.gallery {
+  &__item_link {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition: 0.3s;
+    margin-bottom: 32px;
     img {
       max-width: 100%;
       width: 100%;
       height: auto;
-      display: inline-block;
+      display: block;
+    }
+    &:hover .gallery__item_hover {
+      opacity: 1;
+      transition: 0.3s;
     }
   }
+  &__item_hover {
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    background: #99999994;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  &__btn {
+    color: $light;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+
+//Geography
+.geography {
+  &__image {
+    max-width: 735px;
+  }
+  &__form_wrap {
+    margin-left: auto;
+  }
+
+
   &__form_input {
     padding: 16px;
     width: 100%;
@@ -223,24 +247,20 @@
       color: $dark;
     }
   }
-  &__form_personal {
-    margin: 16px 0 32px;
-    display: flex;
-    align-items: center;
-    input {
-      margin-right: 16px;
-      width: 20px;
-      height: 20px;
-      border: 0.5px solid $dark_5;
-      border-radius: 0px;
-    }
-    span {
-      color: $dark;
-    }
-    a {
-      color: $orange;
+  &__form_assent-label {
+    &:before {
+
     }
   }
+  &__form_assent-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &:checked .geography__form_assent-label:before {
+
+    }
+  }
+
 }
 
 //Cities
@@ -328,5 +348,42 @@
         transition: .35s;
       }
     }
+  }
+}
+
+//Main Form
+.main-callback {
+  padding: 32px;
+  background: $orange;
+  &__title {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    h3 {
+      color: $light;
+    }
+  }
+  &__title_image {
+    margin-right: 16px;
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  &__form_input {
+    width: 207px;
+    height: 31px;
+    padding: 8px 16px;
+    border: 0.5px solid $dark_5;
+    margin-right: 64px;
+    &::placeholder {
+      color: $dark_5;
+    }
+  }
+  &__form_btn {
+    background: $dark;
+    border:  1px solid $dark;
   }
 }
