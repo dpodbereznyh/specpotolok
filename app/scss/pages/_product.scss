@@ -20,5 +20,55 @@
     text-align: center;
     max-width: 674px;
   }
+}
+.master-call {
+  margin-top: 114px;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon_left {
 
+  }
+  &__text {
+    margin: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p {
+      text-align: center;
+    }
+  }
+  &__order {
+    text-align: center;
+    margin: 37px 0 49px;
+  }
+  &__phone {
+    padding: 32px 0;
+    background: $blue;
+    position: relative;
+    a {
+      color: $light;
+    }
+  }
+  &__phone_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__phone_icon {
+    margin-right: 16px;
+  }
+  &__bg {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-36%, 0);
+    img  {
+      display: block;
+    }
+  }
 }
