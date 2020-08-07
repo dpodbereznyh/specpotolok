@@ -23,6 +23,11 @@
 }
 .master-call {
   margin-top: 114px;
+
+  &__wrap {
+    border: 2px solid $blue;
+    padding-top: 55px;
+  }
   &__title {
     display: flex;
     align-items: center;
