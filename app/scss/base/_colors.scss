@@ -32,13 +32,13 @@ $blue_d2: darken($blue, 10%);
 $blue_d3: darken($blue, 15%);
 $blue_d4: darken($blue, 20%);
 
-$color_aqua_default: #6EC1DC;
-$color_aqua_lighten_1: lighten($color_aqua_default, 10%);
-$color_aqua_lighten_2: lighten($color_aqua_default, 15%);
-$color_aqua_lighten_3: lighten($color_aqua_default, 20%);
-$color_aqua_lighten_4: lighten($color_aqua_default, 25%);
+$aqua: #6EC1DC;
+$aqua_l1: lighten($aqua, 10%);
+$aqua_l2: lighten($aqua, 15%);
+$aqua_l3: lighten($aqua, 20%);
+$aqua_l4: lighten($aqua, 25%);
 
-$color_aqua_darken_1: darken($color_aqua_default, 5%);
-$color_aqua_darken_2: darken($color_aqua_default, 10%);
-$color_aqua_darken_3: darken($color_aqua_default, 15%);
-$color_aqua_darken_4: darken($color_aqua_default, 20%);
+$aqua_d1: darken($aqua, 5%);
+$aqua_d2: darken($aqua, 10%);
+$aqua_d3: darken($aqua, 15%);
+$aqua_d4: darken($aqua, 20%);

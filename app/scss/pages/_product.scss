@@ -77,3 +77,50 @@
     }
   }
 }
+//Price
+
+.price {
+  &__table {
+    width: 100%;
+  }
+  &__table_head {
+    background: $orange_l4;
+    height: 20px;
+    line-height: 68px;
+  }
+  &__table_head_item {
+    text-align: center;
+    width: 20%;
+    line-height: 68px;
+  }
+  &__table_body_title {
+    text-align: center;
+    td {
+      height: 53px;
+    }
+  }
+  &__table_body_row {
+
+    td {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      height: 68px;
+      text-align: center;
+
+    }
+  }
+}
+tbody tr:nth-child(odd) {
+  background: $aqua_l4;
+}
+tbody tr:nth-child(even) {
+  background: $light;
+}
+.price__table_body_row td:first-child {
+  text-align: left;
+  padding-left: 13px;
+}
+td {
+  vertical-align: middle!important;
+}
