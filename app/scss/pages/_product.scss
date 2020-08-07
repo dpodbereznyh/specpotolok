@@ -23,7 +23,7 @@
 }
 .master-call {
   margin-top: 114px;
-
+  overflow: hidden;
   &__wrap {
     border: 2px solid $blue;
     padding-top: 55px;
@@ -123,4 +123,53 @@ tbody tr:nth-child(even) {
 }
 td {
   vertical-align: middle;
+}
+
+//Stages
+
+.stages {
+  &__item_icon {
+    position: relative;
+    margin-bottom: 32px;
+  }
+  &__item_img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+  &__item_num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: 7px solid $aqua_l4;
+    background: $aqua;
+    color: $light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.5));
+  }
+  &__item_title {
+    color: $orange;
+    min-height: 42px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  &__item_description {
+    text-align: center;
+    a {
+      color: $dark;
+    }
+  }
 }
