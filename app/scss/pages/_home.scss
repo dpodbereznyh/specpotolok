@@ -20,6 +20,7 @@
   }
 }
 .main-screen {
+  margin-bottom: 64px;
   &__title {
     font-style: normal;
     font-weight: 900;
@@ -117,9 +118,10 @@
 //Aadvantages
 
 .advantages {
+  margin-bottom: 32px;
   &__item {
     display: flex;
-    align-items: start;
+    align-items: center;
     margin-bottom: 32px;
   }
   &__item_icon {
@@ -142,11 +144,12 @@
 //Catalog
 
 .catalog {
+  margin-bottom: 64px;
   &__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   &__item {
     width: 238px;
@@ -226,6 +229,7 @@
 
 //Geography
 .geography {
+  margin-bottom: 32px;
   &__image {
     max-width: 735px;
   }
@@ -246,14 +250,14 @@
     }
   }
   &__form_label {
-    margin: 32px 0;
+    margin: 16px 0 32px;
   }
 }
 
 //Cities
 .cities {
   color: $dark;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   &__title {
     display: block;
     margin: 0 auto 16px;
@@ -296,7 +300,7 @@
 }
 .cities-other {
   color: $dark;
-  margin-bottom: 64px;
+  margin-bottom: 47px;
   &__title {
     display: block;
     margin: 0 auto 16px;
