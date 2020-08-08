@@ -24,14 +24,14 @@ $sm-clean__box-shadow:									rgba(0, 0, 0, 0.2) !default;
 // :: 1.2. Breakpoints
 // ----------------------------------------------------------
 
-$sm-clean__desktop-vp:									768px !default;		// switch from collapsible to desktop
+$sm-clean__desktop-vp:									1068px !default;		// switch from collapsible to desktop
 
 
 // ----------------------------------------------------------
 // :: 1.3. Typography
 // ----------------------------------------------------------
 
-$sm-clean__font-family:									"Lucida Sans Unicode", "Lucida Sans", "Lucida Grande", Arial, sans-serif !default;
+$sm-clean__font-family:									"Roboto";
 $sm-clean__font-size-base:								18px !default;
 $sm-clean__font-size-small:								16px !default;
 $sm-clean__line-height:									17px !default;
@@ -83,20 +83,20 @@ $sm-clean__collapsible-sub-item-indentation:			8px !default;
 // ----------------------------------------------------------
 
 // Menu box
-$sm-clean__desktop-bg:									$sm-clean__gray !default;
-$sm-clean__desktop-border-radius:						100px !default;
-$sm-clean__desktop-padding-horizontal:					10px !default;
+$sm-clean__desktop-bg:									transparent !default;
+$sm-clean__desktop-border-radius:						0 !default;
+$sm-clean__desktop-padding-horizontal:					0 !default;
 
 // Items
-$sm-clean__desktop-item-color:							$sm-clean__gray-darker !default;
-$sm-clean__desktop-item-hover-color:					$sm-clean__red !default;
-$sm-clean__desktop-item-current-color:					$sm-clean__red !default;
+$sm-clean__desktop-item-color:							$light !default;
+$sm-clean__desktop-item-hover-color:					$light !default;
+$sm-clean__desktop-item-current-color:					$light !default;
 $sm-clean__desktop-item-disabled-color:					darken($sm-clean__gray, 20%) !default;
-$sm-clean__desktop-item-padding-vertical:				12px !default;
-$sm-clean__desktop-item-padding-horizontal:				12px !default;
+$sm-clean__desktop-item-padding-vertical:				10px !default;
+$sm-clean__desktop-item-padding-horizontal:				16px !default;
 
 // Sub menu indicators
-$sm-clean__desktop-arrow-size:							4px !default;		// border-width
+$sm-clean__desktop-arrow-size:							6px !default;		// border-width
 $sm-clean__desktop-arrow-color:							$sm-clean__gray-darker !default;
 $sm-clean__desktop-arrow-spacing:						4px !default;
 
@@ -156,21 +156,24 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 // Main menu box
 .sm-clean {
-		// Main menu items
+	background: $sm-clean__collapsible-bg;
+	border-radius: $sm-clean__collapsible-border-radius;
+
+	// Main menu items
 	a {
 		&,
 		&:hover,
 		&:focus,
 		&:active {
-			//padding: $sm-clean__collapsible-item-padding-vertical $sm-clean__collapsible-item-padding-horizontal;
-			///* make room for the toggle button (sub indicator) */
-			//padding-right: $sm-clean__collapsible-item-padding-horizontal + $sm-clean__toggle-size + $sm-clean__toggle-spacing;
-			//color: $sm-clean__collapsible-item-color;
-			//font-family: $sm-clean__font-family;
-			//font-size: $sm-clean__font-size-base;
-			//font-weight: normal;
-			//line-height: $sm-clean__line-height;
-			//text-decoration: none;
+			padding: $sm-clean__collapsible-item-padding-vertical $sm-clean__collapsible-item-padding-horizontal;
+			/* make room for the toggle button (sub indicator) */
+			padding-right: $sm-clean__collapsible-item-padding-horizontal + $sm-clean__toggle-size + $sm-clean__toggle-spacing;
+			color: $sm-clean__collapsible-item-color;
+			font-family: $sm-clean__font-family;
+			font-size: $sm-clean__font-size-base;
+			font-weight: normal;
+			line-height: $sm-clean__line-height;
+			text-decoration: none;
 		}
 
 		&.current {
@@ -183,7 +186,19 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 		// Toggle buttons (sub menu indicators)
 		.sub-arrow {
-
+			position: absolute;
+			top: 50%;
+			margin-top: -(ceil($sm-clean__toggle-size / 2));
+			left: auto;
+			right: $sm-clean__toggle-spacing;
+			width: $sm-clean__toggle-size;
+			height: $sm-clean__toggle-size;
+			overflow: hidden;
+			font: bold #{$sm-clean__font-size-small}/#{$sm-clean__toggle-size} monospace !important;
+			text-align: center;
+			text-shadow: none;
+			background: $sm-clean__collapsible-toggle-bg;
+			border-radius: $sm-clean__border-radius;
 		}
 		.sub-arrow::before {
 			content: '+';
@@ -195,7 +210,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// round the corners of the first item
 	> li:first-child > a, > li:first-child > :not(ul) a {
-		//border-radius: $sm-clean__collapsible-border-radius $sm-clean__collapsible-border-radius 0 0;
+		border-radius: $sm-clean__collapsible-border-radius $sm-clean__collapsible-border-radius 0 0;
 	}
 	// round the corners of the last item
 	@include sm-clean__round-corners-last-item($sm-clean__collapsible-border-radius);
@@ -210,7 +225,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// Sub menus box
 	ul {
-		//background: $sm-clean__collapsible-sub-bg;
+		background: $sm-clean__collapsible-sub-bg;
 
 		// Sub menus items
 		a {
@@ -218,8 +233,9 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:hover,
 			&:focus,
 			&:active {
-				//font-size: $sm-clean__font-size-small;
+				font-size: $sm-clean__font-size-small;
 				// add indentation for sub menus text
+				border-left: $sm-clean__collapsible-sub-item-indentation solid transparent;
 			}
 		}
 
@@ -241,7 +257,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 	   collapsible to desktop (navbar + dropdowns)
 	-----------------------------------------------*/
 	/* start... (it's not recommended editing these rules) */
-	//.sm-clean ul{position:absolute;width:12em;}
+	.sm-clean ul{position:absolute;width:12em;}
 	.sm-clean li{float:left;}
 	.sm-clean.sm-rtl li{float:right;}
 	.sm-clean ul li,.sm-clean.sm-rtl ul li,.sm-clean.sm-vertical li{float:none;}
@@ -252,9 +268,9 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// Main menu box
 	.sm-clean {
-		//padding: 0 $sm-clean__desktop-padding-horizontal;
-		//background: $sm-clean__desktop-bg;
-		//border-radius: $sm-clean__desktop-border-radius;
+		padding: 0 $sm-clean__desktop-padding-horizontal;
+		background: $sm-clean__desktop-bg;
+		border-radius: $sm-clean__desktop-border-radius;
 
 		// Main menu items
 		a {
@@ -263,16 +279,16 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:focus,
 			&:active,
 			&.highlighted {
-				//padding: $sm-clean__desktop-item-padding-vertical $sm-clean__desktop-item-padding-horizontal;
-				//color: $sm-clean__desktop-item-color;
-				//border-radius: 0 !important;
+				padding: $sm-clean__desktop-item-padding-vertical $sm-clean__desktop-item-padding-horizontal;
+				color: $sm-clean__desktop-item-color;
+				border-radius: 0 !important;
 			}
 
 			&:hover,
 			&:focus,
 			&:active,
 			&.highlighted {
-				//color: $sm-clean__desktop-item-hover-color;
+				color: $sm-clean__desktop-item-hover-color;
 			}
 
 			&.current {
@@ -290,16 +306,16 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 			// Sub menu indicators
 			.sub-arrow {
-				//top: 50%;
-				//margin-top: -(ceil($sm-clean__desktop-arrow-size / 2));
-				//right: $sm-clean__desktop-item-padding-horizontal;
-				//width: 0;
-				//height: 0;
-				//border-width: $sm-clean__desktop-arrow-size;
-				//border-style: solid dashed dashed dashed;
-				//border-color: $sm-clean__desktop-arrow-color transparent transparent transparent;
-				//background: transparent;
-				//border-radius: 0;
+				top: 0;
+				margin-top: 0;
+				right: 0;
+				width: 0;
+				height: 0;
+				border-width: unset;
+				border-style: unset;
+				border-color: unset;
+				background: transparent;
+				border-radius: 0;
 			}
 			// reset mobile first style
 			.sub-arrow::before {
@@ -314,32 +330,32 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 		// First sub level carets
 		> li > ul::before,
- 		//> li > ul::after {
-		//	content: '';
-		//	position: absolute;
-		//	top: -($sm-clean__desktop-sub-caret-size * 2 + $sm-clean__border-width * 2);
-		//	left: $sm-clean__desktop-sub-caret-left;
-		//	width: 0;
-		//	height: 0;
-		//	overflow: hidden;
-		//	border-width: ($sm-clean__desktop-sub-caret-size + $sm-clean__border-width);
-		//	border-style: dashed dashed solid dashed;
-		//	border-color: transparent transparent $sm-clean__desktop-sub-border-color transparent;
-		//}
-		//> li > ul::after {
-		//	top: -($sm-clean__desktop-sub-caret-size * 2);
-		//	left: ($sm-clean__desktop-sub-caret-left + $sm-clean__border-width);
-		//	border-width: $sm-clean__desktop-sub-caret-size;
-		//	border-color: transparent transparent $sm-clean__desktop-sub-bg transparent;
-		//}
+ 		> li > ul::after {
+			content: '';
+			position: absolute;
+			top: -($sm-clean__desktop-sub-caret-size * 2 + $sm-clean__border-width * 2);
+			left: $sm-clean__desktop-sub-caret-left;
+			width: 0;
+			height: 0;
+			overflow: hidden;
+			border-width: ($sm-clean__desktop-sub-caret-size + $sm-clean__border-width);
+			border-style: dashed dashed solid dashed;
+			border-color: transparent transparent $sm-clean__desktop-sub-border-color transparent;
+		}
+		> li > ul::after {
+			top: -($sm-clean__desktop-sub-caret-size * 2);
+			left: ($sm-clean__desktop-sub-caret-left + $sm-clean__border-width);
+			border-width: $sm-clean__desktop-sub-caret-size;
+			border-color: transparent transparent $sm-clean__desktop-sub-bg transparent;
+		}
 
 		// Sub menus box
 		ul {
-			//border: $sm-clean__border-width solid $sm-clean__desktop-sub-border-color;
-			//padding: $sm-clean__desktop-sub-padding-vertical $sm-clean__desktop-sub-padding-horizontal;
-			//background: $sm-clean__desktop-sub-bg;
-			//border-radius: $sm-clean__desktop-sub-border-radius !important;
-			//box-shadow: $sm-clean__desktop-sub-box-shadow;
+			border: $sm-clean__border-width solid $sm-clean__desktop-sub-border-color;
+			padding: $sm-clean__desktop-sub-padding-vertical $sm-clean__desktop-sub-padding-horizontal;
+			background: $sm-clean__desktop-sub-bg;
+			border-radius: $sm-clean__desktop-sub-border-radius !important;
+			box-shadow: $sm-clean__desktop-sub-box-shadow;
 
 			// Sub menus items
 			a {
@@ -377,13 +393,12 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 				// Sub menu indicators
 				.sub-arrow {
-					//right: 8px;
-					//top: 50%;
-					//margin-top: -$sm-clean__desktop-sub-arrow-size;
-					//border-width: $sm-clean__desktop-sub-arrow-size;
-					//border-style: dashed dashed dashed solid;
-					//border-color: transparent transparent transparent $sm-clean__desktop-arrow-color;
-                    //
+					right: 8px;
+					top: 50%;
+					margin-top: -$sm-clean__desktop-sub-arrow-size;
+					border-width: $sm-clean__desktop-sub-arrow-size;
+					border-style: dashed dashed dashed solid;
+					border-color: transparent transparent transparent $sm-clean__desktop-arrow-color;
 				}
 			}
 		}
@@ -446,8 +461,8 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 				// Sub menu indicators
 				.sub-arrow {
-					//right: auto;
-					//left: $sm-clean__desktop-item-padding-horizontal;
+					right: auto;
+					left: $sm-clean__desktop-item-padding-horizontal;
 				}
 			}
 
@@ -462,11 +477,10 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 					// Sub menu indicators
 					.sub-arrow {
-						//right: auto;
-						//left: 8px;
-						//border-style: dashed solid dashed dashed;
-						//border-color: transparent $sm-clean__desktop-arrow-color transparent transparent;
-                        //
+						right: auto;
+						left: 8px;
+						border-style: dashed solid dashed dashed;
+						border-color: transparent $sm-clean__desktop-arrow-color transparent transparent;
 					}
 				}
 			}
@@ -492,11 +506,10 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 					// Sub menu indicators
 					.sub-arrow {
-						//right: auto;
-						//left: 8px;
-						//border-style: dashed solid dashed dashed;
-						//border-color: transparent $sm-clean__desktop-arrow-color transparent transparent;
-                        //
+						right: auto;
+						left: 8px;
+						border-style: dashed solid dashed dashed;
+						border-color: transparent $sm-clean__desktop-arrow-color transparent transparent;
 					}
 				}
 			}
@@ -508,7 +521,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		// Main menu box
 		&.sm-vertical {
 			padding: $sm-clean__desktop-vertical-padding-vertical 0;
-			//border-radius: $sm-clean__desktop-vertical-border-radius;
+			border-radius: $sm-clean__desktop-vertical-border-radius;
 
 			// Main menu items
 			a {
@@ -527,13 +540,12 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 				// Sub menu indicators
 				.sub-arrow {
-					//right: 8px;
-					//top: 50%;
-					//margin-top: -$sm-clean__desktop-sub-arrow-size;
-					//border-width: $sm-clean__desktop-sub-arrow-size;
-					//border-style: dashed dashed dashed solid;
-					//border-color: transparent transparent transparent $sm-clean__desktop-arrow-color;
-                    //
+					right: 8px;
+					top: 50%;
+					margin-top: -$sm-clean__desktop-sub-arrow-size;
+					border-width: $sm-clean__desktop-sub-arrow-size;
+					border-style: dashed dashed dashed solid;
+					border-color: transparent transparent transparent $sm-clean__desktop-arrow-color;
 				}
 			}
 

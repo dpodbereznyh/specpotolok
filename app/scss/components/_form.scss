@@ -41,7 +41,9 @@
     width: 100%;
     text-transform: uppercase;
     background: $dark;
-    border: 1px solid $dark;
+    &:hover {
+      background: $dark_4;
+    }
   }
   &__subtitle {
     display: flex;
@@ -51,7 +53,8 @@
   &__subtitle_icon {
     width: 20px;
     height: 20px;
-    margin-right: 8px;
+    margin-right: 16px;
+    margin-bottom: 8px;
     img {
       max-width: 100%;
       width: 100%;
@@ -63,7 +66,7 @@
     color: $orange;
   }
   &__title_margin {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
   }
@@ -79,19 +82,17 @@
 }
 .form__checkbox:checked + label,
 .form__checkbox:not(:checked) + label {
-  display: inline-block;
+  display: flex;
   position: relative;
-  padding-left: 36px;
   line-height: 20px;
   cursor: pointer;
+  align-items: center;
 }
-.form__checkbox:checked + label:before,
-.form__checkbox:not(:checked) + label:before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 20px;
+.form__checkbox:checked + label > span,
+.form__checkbox:not(:checked) + label > span {
+  display: block;
+  margin-right: 16px;
+  min-width: 20px;
   height: 20px;
   border: 0.5px solid $dark_5;
 }
@@ -102,7 +103,7 @@
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  left: 3px;
+  left: 4px;
   top: 4px;
   width: 13px;
   height: 9px;
@@ -122,5 +123,135 @@
     span {
       color:$dark;
     }
+  }
+}
+.product-form__label {
+  margin-top: 16px;
+}
+.geography__form_label {
+  margin: 16px 0 32px;
+}
+
+//Main Form
+.main-callback {
+  padding: 32px;
+  background: $orange;
+  &__title {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    h3 {
+      color: $light;
+    }
+  }
+  &__title_image {
+    margin-right: 16px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__form_wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  &__form_input {
+    width: 207px;
+    height: 31px;
+    padding: 8px 16px;
+    border: 0.5px solid $dark_5;
+    margin-right: 64px;
+    &::placeholder {
+      color: $dark_5;
+    }
+  }
+  &__form_btn {
+    background: $dark;
+    transition: .35s;
+    &:hover {
+      background: $dark_4;
+      transition: .35s;
+    }
+  }
+}
+.main-callback__form_checkbox:checked,
+.main-callback__form_checkbox:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.main-callback__form_checkbox:checked + label,
+.main-callback__form_checkbox:not(:checked) + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 36px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.main-callback__form_checkbox:checked + label:before,
+.main-callback__form_checkbox:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid $dark_5;
+  background: $light;
+}
+.main-callback__form_checkbox:checked + label:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  left: 4px;
+  top: 4px;
+  width: 13px;
+  height: 9px;
+  border-radius: 1px;
+  border-left: 3px solid $blue_d4;
+  border-bottom: 3px solid $blue_d4;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.main-callback__form_label {
+  a {
+    color: $dark;
+    span {
+      color: $light;
+    }
+  }
+}
+
+@media screen and (max-width: 830.5px) {
+  .main-callback__form_wrap {
+    width: 100% ;
+    justify-content: space-around;
+  }
+  .main-callback__form_input {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 686.5px) {
+  .main-callback__form_wrap {
+    flex-direction: column;
+    width: 50%;
+    min-width: 310px;
+  }
+  .main-callback__form_input {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 495.5px) {
+  .main-callback {
+    padding: 32px 10px;
   }
 }

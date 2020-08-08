@@ -1,9 +1,9 @@
 .btn {
   padding: 8px 16px;
   background: $orange;
-  border: 1px solid $orange;
   color: $light;
   transition: .35s;
+  border: none;
   &:hover {
     background: $orange_d3;
     color: $light;

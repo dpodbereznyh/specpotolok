@@ -1,0 +1,60 @@
+.contacts {
+  margin-top: 64px;
+  &__list {
+    display: flex;
+    margin-bottom: 46px;
+  }
+  &__item {
+    max-width: 266px;
+    margin-right: 128px;
+  }
+  &__address_item {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+  &__phone_item {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+  &__address_item_icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__phone_item_icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__address_item_text {
+    color: $dark;
+  }
+  &__address_item_text-email {
+    color: $dark;
+    transition: .35s;
+    &:hover {
+      color: $orange-d3;
+      transition: .35s;
+    }
+  }
+  &__phone_item_text-tel {
+    color: $dark;
+    transition: .35s;
+    &:hover {
+      color: $orange-d3;
+      transition: .35s;
+    }
+  }
+}
+.map {
+  height: 355px;
+  width: 100%;
+}

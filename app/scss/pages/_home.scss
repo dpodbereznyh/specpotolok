@@ -160,7 +160,6 @@
   &__item_link {
     width: 100%;
     height: 100%;
-    display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,19 +234,6 @@
   }
   &__form_wrap {
     margin-left: auto;
-  }
-  &__form_input {
-    padding: 16px;
-    width: 100%;
-    margin-bottom: 16px;
-    border: 0.5px solid $dark_5;
-    &::placeholder {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 19px;
-      color: $dark;
-    }
   }
   &__form_label {
     margin: 16px 0 32px;
@@ -342,96 +328,3 @@
   }
 }
 
-//Main Form
-.main-callback {
-  padding: 32px;
-  background: $orange;
-  &__title {
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px;
-    h3 {
-      color: $light;
-    }
-  }
-  &__title_image {
-    margin-right: 16px;
-  }
-  &__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  &__form_wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-  }
-  &__form_input {
-    width: 207px;
-    height: 31px;
-    padding: 8px 16px;
-    border: 0.5px solid $dark_5;
-    margin-right: 64px;
-    &::placeholder {
-      color: $dark_5;
-    }
-  }
-  &__form_btn {
-    background: $dark;
-    border:  1px solid $dark;
-  }
-}
-.main-callback__form_checkbox:checked,
-.main-callback__form_checkbox:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-.main-callback__form_checkbox:checked + label,
-.main-callback__form_checkbox:not(:checked) + label {
-  display: inline-block;
-  position: relative;
-  padding-left: 36px;
-  line-height: 20px;
-  cursor: pointer;
-}
-.main-callback__form_checkbox:checked + label:before,
-.main-callback__form_checkbox:not(:checked) + label:before {
-  content: "";
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 20px;
-  height: 20px;
-  border: 0.5px solid $dark_5;
-  background: $light;
-}
-.main-callback__form_checkbox:checked + label:after {
-  content: "";
-  position: absolute;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  left: 3px;
-  top: 4px;
-  width: 13px;
-  height: 9px;
-  border-radius: 1px;
-  border-left: 3px solid $blue_d4;
-  border-bottom: 3px solid $blue_d4;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.main-callback__form_label {
-  a {
-    color: $dark;
-    span {
-      color: $light;
-    }
-  }
-}

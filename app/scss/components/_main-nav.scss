@@ -4,7 +4,7 @@
   align-items: center;
   &__location {
     display: flex;
-
+    margin-left: auto;
     color: $light;
   }
   &__location-icon {
@@ -217,7 +217,7 @@
   clear: both;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1032.5px) {
   #main-menu {
     float: left;
     clear: none;
@@ -312,7 +312,7 @@
   display: block;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1068px) {
   /* hide the button in desktop view */
   .main-menu-btn {
     position: absolute;
@@ -323,12 +323,5 @@
     display: block;
   }
 }
-
-//.main-menu__category_list {
-//  display: block!important;
-//}
-//.sub-category__list {
-//  display: block !important;
-//}
 
 

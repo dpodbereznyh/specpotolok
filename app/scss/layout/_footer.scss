@@ -52,6 +52,11 @@
     }
     a {
       color: $light;
+      transition: .35s;
+      &:hover {
+        color: $orange-d3;
+        transition: .35s;
+      }
     }
   }
   &__contacts_item_icon {
@@ -76,6 +81,11 @@
   width: fit-content;
   a {
     color: $light;
+    transition: .35s;
+    &:hover {
+      color: $orange-d3;
+      transition: .35s;
+    }
   }
 }
 .develope {
@@ -83,5 +93,23 @@
   width: fit-content;
   a {
     color: $light;
+    transition: .35s;
+    &:hover {
+      color: $orange-d3;
+      transition: .35s;
+    }
+  }
+}
+
+@include laptop {
+  .footer__nav_list {
+    flex-wrap: wrap;
+    //justify-content: space-around;
+  }
+  .footer__nav_item {
+    margin-bottom: 32px;
+  }
+  .footer__nav_list {
+    margin-bottom: 32px;
   }
 }

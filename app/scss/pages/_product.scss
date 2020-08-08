@@ -23,7 +23,8 @@
   }
 }
 .master-call {
-  margin-top: 114px;
+  margin-top: 64px;
+  margin-bottom: 32px;
   overflow: hidden;
   &__wrap {
     border: 2px solid $blue;
@@ -62,6 +63,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    a {
+      color: $light;
+      transition: .35s;
+      &:hover {
+        color: $orange-d3;
+        transition: .35s;
+      }
+    }
   }
   &__phone_icon {
     margin-right: 16px;
@@ -124,6 +133,11 @@ tbody tr:nth-child(even) {
 }
 td {
   vertical-align: middle;
+}
+
+//Product-advanages
+.product-advanages {
+  margin-bottom: 32px;
 }
 
 //Stages
