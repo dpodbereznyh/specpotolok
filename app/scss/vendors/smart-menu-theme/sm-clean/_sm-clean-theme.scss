@@ -32,9 +32,9 @@ $sm-clean__desktop-vp:									1068px !default;		// switch from collapsible to d
 // ----------------------------------------------------------
 
 $sm-clean__font-family:									"Roboto";
-$sm-clean__font-size-base:								18px !default;
+$sm-clean__font-size-base:								16px !default;
 $sm-clean__font-size-small:								16px !default;
-$sm-clean__line-height:									17px !default;
+$sm-clean__line-height:									16px !default;
 
 
 // ----------------------------------------------------------
@@ -156,8 +156,8 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 // Main menu box
 .sm-clean {
-	background: $sm-clean__collapsible-bg;
-	border-radius: $sm-clean__collapsible-border-radius;
+	background: #FFE7D6;
+	border-radius: 0px;
 
 	// Main menu items
 	a {
@@ -188,17 +188,16 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		.sub-arrow {
 			position: absolute;
 			top: 50%;
-			margin-top: -(ceil($sm-clean__toggle-size / 2));
-			left: auto;
-			right: $sm-clean__toggle-spacing;
-			width: $sm-clean__toggle-size;
-			height: $sm-clean__toggle-size;
-			overflow: hidden;
-			font: bold #{$sm-clean__font-size-small}/#{$sm-clean__toggle-size} monospace !important;
-			text-align: center;
-			text-shadow: none;
-			background: $sm-clean__collapsible-toggle-bg;
-			border-radius: $sm-clean__border-radius;
+			right: 50px;
+			transform: translate(0, -50%);
+			//width: $sm-clean__toggle-size;
+			//height: $sm-clean__toggle-size;
+			//overflow: hidden;
+			//font: bold #{$sm-clean__font-size-small}/#{$sm-clean__toggle-size} monospace !important;
+			//text-align: center;
+			//text-shadow: none;
+			//background: $sm-clean__collapsible-toggle-bg;
+			//border-radius: $sm-clean__border-radius;
 		}
 		.sub-arrow::before {
 			content: '+';
@@ -210,14 +209,14 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// round the corners of the first item
 	> li:first-child > a, > li:first-child > :not(ul) a {
-		border-radius: $sm-clean__collapsible-border-radius $sm-clean__collapsible-border-radius 0 0;
+		border-radius: 0px;
 	}
 	// round the corners of the last item
 	@include sm-clean__round-corners-last-item($sm-clean__collapsible-border-radius);
 
 	// Main menu items separators
 	li {
-		border-top: 1px solid $sm-clean__collapsible-separators-color;
+		border-top: 1px solid $orange;
 	}
 	> li:first-child {
 		border-top: 0;
@@ -225,7 +224,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 	// Sub menus box
 	ul {
-		background: $sm-clean__collapsible-sub-bg;
+		background: #FFE7D6;
 
 		// Sub menus items
 		a {
@@ -233,9 +232,8 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:hover,
 			&:focus,
 			&:active {
-				font-size: $sm-clean__font-size-small;
+				font-size: 16px;
 				// add indentation for sub menus text
-				border-left: $sm-clean__collapsible-sub-item-indentation solid transparent;
 			}
 		}
 
@@ -257,7 +255,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 	   collapsible to desktop (navbar + dropdowns)
 	-----------------------------------------------*/
 	/* start... (it's not recommended editing these rules) */
-	.sm-clean ul{position:absolute;width:12em;}
+	.sm-clean ul{position:absolute;width:20em;}
 	.sm-clean li{float:left;}
 	.sm-clean.sm-rtl li{float:right;}
 	.sm-clean ul li,.sm-clean.sm-rtl ul li,.sm-clean.sm-vertical li{float:none;}
@@ -279,8 +277,8 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:focus,
 			&:active,
 			&.highlighted {
-				padding: $sm-clean__desktop-item-padding-vertical $sm-clean__desktop-item-padding-horizontal;
-				color: $sm-clean__desktop-item-color;
+				padding: 11px 16px;
+				color: $light;
 				border-radius: 0 !important;
 			}
 
@@ -288,15 +286,15 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 			&:focus,
 			&:active,
 			&.highlighted {
-				color: $sm-clean__desktop-item-hover-color;
+				color: $light;
 			}
 
 			&.current {
-				color: $sm-clean__desktop-item-current-color;
+				color: $light;
 			}
 
 			&.disabled {
-				color: $sm-clean__desktop-item-disabled-color;
+				color: $light;
 			}
 
 			// Make room for the sub arrows
@@ -306,16 +304,18 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 			// Sub menu indicators
 			.sub-arrow {
-				top: 0;
-				margin-top: 0;
-				right: 0;
-				width: 0;
-				height: 0;
-				border-width: unset;
-				border-style: unset;
-				border-color: unset;
-				background: transparent;
-				border-radius: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				//margin-top: -(ceil($sm-clean__desktop-arrow-size / 2));
+				right: 8px;
+				width: 6px;
+				height: 3px;
+				//border-width: $sm-clean__desktop-arrow-size;
+				//border-style: solid dashed dashed dashed;
+				//border-color: $sm-clean__desktop-arrow-color transparent transparent transparent;
+				background: url(../img/header/catalog-arrow-down.svg) center center no-repeat;
+
+				//border-radius: 0;
 			}
 			// reset mobile first style
 			.sub-arrow::before {
@@ -331,6 +331,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		// First sub level carets
 		> li > ul::before,
  		> li > ul::after {
+			display: none;
 			content: '';
 			position: absolute;
 			top: -($sm-clean__desktop-sub-caret-size * 2 + $sm-clean__border-width * 2);
@@ -351,11 +352,12 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 
 		// Sub menus box
 		ul {
-			border: $sm-clean__border-width solid $sm-clean__desktop-sub-border-color;
-			padding: $sm-clean__desktop-sub-padding-vertical $sm-clean__desktop-sub-padding-horizontal;
+			border: .5px solid $orange;
+			padding: 0px;
+			margin-top: 0px!important;
 			background: $sm-clean__desktop-sub-bg;
-			border-radius: $sm-clean__desktop-sub-border-radius !important;
-			box-shadow: $sm-clean__desktop-sub-box-shadow;
+			border-radius: 0px;
+			box-shadow: none;
 
 			// Sub menus items
 			a {
@@ -373,7 +375,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 				&:focus,
 				&:active,
 				&.highlighted {
-					background: $sm-clean__desktop-sub-item-hover-bg;
+					background: transparent;
 					color: $sm-clean__desktop-sub-item-hover-color;
 				}
 
@@ -382,7 +384,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 				}
 
 				&.disabled {
-					background: $sm-clean__desktop-sub-bg;
+					background: transparent;
 					color: $sm-clean__desktop-sub-item-disabled-color;
 				}
 
@@ -531,11 +533,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 				&:focus,
 				&:active,
 				&.highlighted {
-					background: $sm-clean__desktop-vertical-item-hover-bg;
+					background: transparent;
 				}
 
 				&.disabled {
-					background: $sm-clean__desktop-bg;
+					background: transparent;
 				}
 
 				// Sub menu indicators
@@ -566,11 +568,11 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 					&:focus,
 					&:active,
 					&.highlighted {
-						background: $sm-clean__desktop-sub-item-hover-bg;
+						background: transparent;
 					}
 
 					&.disabled {
-						background: $sm-clean__desktop-sub-bg;
+						background: transparent;
 					}
 				}
 			}
