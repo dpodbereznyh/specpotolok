@@ -114,6 +114,49 @@
 .swiper-button-next, .swiper-button-prev, .main-screen__swiper_bullet {
   cursor: pointer;
 }
+@media screen and (max-width: 814.5px){
+  .main-screen__title {
+    font-size: 37px;
+    line-height: 44px;
+    left: 75px;
+  }
+  .main-screen__swiper-pagination {
+    bottom: 16px;
+  }
+}
+@media screen and (max-width: 617.5px){
+  .main-screen__title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+  }
+  .main-screen__swiper-pagination {
+    bottom: 16px;
+  }
+}
+@media screen and (max-width: 507.5px){
+  .main-screen__title {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 700;
+    left: 44px;
+  }
+  .main-screen__slider_button-next,
+  .main-screen__slider_button-prev {
+    width: 26px;
+    height: 38px;
+  }
+}
+@media screen and (max-width: 411.5px) {
+  .main-screen__title {
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+  .main-screen__swiper-pagination {
+    bottom: 8px;
+  }
+}
 
 //Aadvantages
 
