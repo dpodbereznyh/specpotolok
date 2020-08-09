@@ -137,13 +137,13 @@
   }
   &__table_head {
     background: $orange_l4;
-    height: 20px;
-    line-height: 68px;
+    min-height: 20px;
   }
   &__table_head_item {
     text-align: center;
     width: 20%;
-    line-height: 68px;
+    height: auto;
+    padding: 16px 0;
   }
   &__table_body_title {
     text-align: center;
@@ -157,9 +157,8 @@
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
-      height: 68px;
       text-align: center;
-
+      padding: 16px 0;
     }
   }
 }
@@ -176,7 +175,39 @@ tbody tr:nth-child(even) {
 td {
   vertical-align: middle;
 }
-
+@media screen and (max-width: 730.5px){
+  .price__table_head_item {
+    font-size: 14px;
+  }
+  .price__table_body_title td {
+    font-size: 14px;
+  }
+  .price__table_body_row td {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480.5px){
+  .price__table_head_item {
+    font-size: 12px;
+  }
+  .price__table_body_title td {
+    font-size: 12px;
+  }
+  .price__table_body_row td {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480.5px){
+  .price__table_head_item {
+    font-size: 10px;
+  }
+  .price__table_body_title td {
+    font-size: 10px;
+  }
+  .price__table_body_row td {
+    font-size: 10px;
+  }
+}
 //Product-advanages
 .product-advanages {
   margin-bottom: 32px;
@@ -229,7 +260,11 @@ td {
     }
   }
 }
-
+@media screen and (max-width: 993.5px){
+  .stages__item {
+    margin-bottom: 32px;
+  }
+}
 //Services
 
 .services {
@@ -253,5 +288,31 @@ td {
   &__item_title {
     text-align: center;
     color: $dark;
+  }
+}
+@media screen and (max-width: 915.5px){
+  .services__list {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .services__item {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 648.5px){
+  .bottom-offer__title {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 468.5px){
+  .bottom-offer__title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 399.5px){
+  .bottom-offer__title {
+    font-size: 15px;
+    line-height: 20px;
   }
 }
