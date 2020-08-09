@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     border: 0.5px solid $dark;
+    height: 100%;
   }
   &__title {
     display: flex;
@@ -229,7 +230,12 @@
     }
   }
 }
-
+@media screen and (max-width: 1201.5px) {
+  .product-offer__form {
+    margin: 64px auto;
+    height: auto;
+  }
+}
 @media screen and (max-width: 830.5px) {
   .main-callback__form_wrap {
     width: 100% ;
@@ -253,5 +259,13 @@
 @media screen and (max-width: 495.5px) {
   .main-callback {
     padding: 32px 10px;
+  }
+}
+@media screen and (max-width: 411.5px) {
+  .form__title {
+    text-align: center;
+  }
+  .form__description {
+    text-align: center;
   }
 }

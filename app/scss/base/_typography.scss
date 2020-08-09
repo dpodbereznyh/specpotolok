@@ -59,3 +59,29 @@ $font-family: "Roboto", sans-serif;
   font-size: 10px;
   line-height: 12px;
 }
+@media screen and (max-width: 617.5px) {
+  .h1 {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 507.5px){
+  .h1 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 411.5px) {
+  .h1 {
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 500;
+  }
+  .base-font {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
