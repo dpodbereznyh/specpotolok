@@ -105,17 +105,13 @@
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 4px;
-  top: 4px;
+  top: 50%;
   width: 13px;
   height: 9px;
   border-radius: 1px;
   border-left: 3px solid $orange;
   border-bottom: 3px solid $orange;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  transform: translate(0, -70%) rotate(-45deg);
 }
 .form__label {
   margin-bottom: 16px;
@@ -210,17 +206,13 @@
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 4px;
-  top: 4px;
+  top: 50%;
   width: 13px;
   height: 9px;
   border-radius: 1px;
   border-left: 3px solid $blue_d4;
   border-bottom: 3px solid $blue_d4;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  transform: translate(0, -70%) rotate(-45deg);
 }
 .main-callback__form_label {
   a {

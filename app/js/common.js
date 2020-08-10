@@ -30,6 +30,30 @@ $(document).ready(function () {
         }
     });
 
+
+    $(".js-callback").on( "click", function() {
+        var newtitle = $(this).attr("data-title");
+        var newinput = $(this).attr("data-input");
+        $(".js-title").html(newtitle);
+        $(".js-zakaz").val(newinput);
+    });
+
+    $("#popup-form").submit(function(){
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            parent.jQuery.fancybox.getInstance().close();
+            $.fancybox.open({
+                src: '#fancyalert',
+            });
+            $("#popup-form").trigger("reset");
+        });
+        return false;
+    });
+
 });
 // Main Screen Swiper Slider
 var mainSlider = new Swiper ('.main-screen__swiper-container', {

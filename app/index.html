@@ -77,7 +77,7 @@
                             </a>
                         </li>
                         <li class="header__top_nav_feedback-item header__top_nav_feedback-item-btn">
-                            <a href="#" class="btn small">
+                            <a href="#" class="btn small js-callback" data-fancybox data-src="#popup-form" data-title="Вызвать замерщика">
                                 ВЫЗОВ ЗАМЕРЩИКА
                             </a>
                         </li>
@@ -741,6 +741,7 @@
                             </h3>
                         </div>
                         <form>
+                            <input type="hidden" value="Заявка из формы Расчитать стоимость" name="title" required="">
                             <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
                             <input type="text" class="form__input" placeholder="Объем" name="value">
@@ -952,8 +953,9 @@
             </div>
             <form class="main-callback__form">
                 <div class="main-callback__form_wrap">
-                    <input class="main-callback__form_input small" type="text" placeholder="Имя">
-                    <input class="main-callback__form_input small" type="tel" placeholder="Телефон">
+                    <input type="hidden" value="Заявка из формы Вызвать замерщика" name="title" required="">
+                    <input class="main-callback__form_input small" type="text" placeholder="Имя" name="name">
+                    <input class="main-callback__form_input small" type="tel" placeholder="Телефон" name="phone">
                     <button type="submit" class="main-callback__form_btn btn small">
                         ВЫЗВАТЬ ЗАМЕРЩИКА
                     </button>
@@ -1059,6 +1061,38 @@
             <a href="https://apimedia.ru" class="very-small ">
                 Создание и разработка Api Media
             </a>
+        </div>
+        <div class="d-none">
+            <div class="form__wrap" id="popup-form">
+                <div class="form__title">
+                    <div class="form__title_icon">
+                        <img src="../img/geography/calc-icon.svg" alt="">
+                    </div>
+                    <h3 class=" h3">
+                        Вызвать замерщика
+                    </h3>
+                </div>
+                <form>
+                    <input type="hidden" value="Заявка из шапки Вызвать замерщика" name="title" required="">
+                    <input type="text" class="form__input" placeholder="Ваш имя*" name="name" required>
+                    <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
+                    <input type="checkbox" class="form__checkbox" id="form__checkbox">
+                    <label for="form__checkbox" class="form__label product-form__label">
+                        <span></span>
+                        <a href="#" class="small" target="_blank">
+                                    <span class="small">
+                                        Согласен на обработку персональных данных, ознакомлен с политикой конфиденциальности
+                                    </span>
+                        </a>
+                    </label>
+                    <button class="geography__form_btn form__btn btn small">
+                        вызвать
+                    </button>
+                </form>
+            </div>
+            <div id="fancyalert" class="fancyalert">
+                <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+            </div>
         </div>
     </div>
 </footer>
