@@ -485,12 +485,12 @@
                                 Напишите нам
                             </p>
                         </div>
-                        <form>
+                        <form class="form" method="post">
                             <input type="hidden" value="Заявка из формы Остались вопросы?" name="title" required="">
                             <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
                             <input type="text" class="form__input" placeholder="Сообщение" name="comment">
-                            <input type="checkbox" class="form__checkbox" id="form__assent">
+                            <input type="checkbox" class="form__checkbox" id="form__assent" checked required>
                             <label for="form__assent" class="form__label geography__form_label">
                                 <span></span>
                                 <a href="#" class="small" target="_blank">
@@ -500,7 +500,7 @@
                                     персональных данных
                                 </a>
                             </label>
-                            <button class="geography__form_btn form__btn btn small">
+                            <button type="submit" class="geography__form_btn form__btn btn small">
                                 получить стоимость
                             </button>
                         </form>

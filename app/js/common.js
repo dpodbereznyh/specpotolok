@@ -38,21 +38,37 @@ $(document).ready(function () {
         $(".js-zakaz").val(newinput);
     });
 
-    $("#popup-form").submit(function(){
+    $(".form").submit(function(){
         $.ajax({
             type: "POST",
             url: "send.php",
             data: $(this).serialize()
         }).done(function() {
-            $(this).find("input").val("");
+            // $(this).find("input").val("");
+            $.fancybox.open({
+                src: '#fancyalert',
+            });
+            $(".form").trigger("reset");
+        });
+        return false;
+    });
+
+    $(".form-popup").submit(function(){
+        $.ajax({
+            type: "POST",
+            url: "send.php",
+            data: $(this).serialize()
+        }).done(function() {
+            // $(this).find("input").val("");
             parent.jQuery.fancybox.getInstance().close();
             $.fancybox.open({
                 src: '#fancyalert',
             });
-            $("#popup-form").trigger("reset");
+            $(".form-popup").trigger("reset");
         });
         return false;
     });
+
 
 });
 // Main Screen Swiper Slider

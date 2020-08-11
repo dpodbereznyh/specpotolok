@@ -2,10 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require (__DIR__.'/smtp_grid/Exception.php');
-require (__DIR__.'/smtp_grid/PHPMailer.php');
-require (__DIR__.'/smtp_grid/SMTP.php');
-
+require (__DIR__.'php_mailer/Exception.php');
+require (__DIR__.'php_mailer/PHPMailer.php');
+require (__DIR__.'php_mailer/SMTP.php');
 $recipient_mail1 = "";
 
 $mail = new PHPMailer;
@@ -29,7 +28,7 @@ catch (Exception $e) {
 
 
 
-$message = "<h1>Заявка с сайта Спецпотолок</h1>";
+$message = "<h1>Спецпотолок</h1>";
 if (isset($_POST['name'])) {
 	$message .= "Имя: ".$_POST['name']."<br />";
 }

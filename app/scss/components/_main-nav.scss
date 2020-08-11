@@ -17,6 +17,16 @@
   }
   &__location-city {
     position: relative;
+    color: $light;
+    transition: .35s;
+    &:hover {
+      transition: .35s;
+      color: $orange-d3;
+    }
+    &:hover:after {
+      background: $orange-d3;
+      transition: .35s;
+    }
     &:after {
       content: "";
       display: inline-block;
@@ -26,6 +36,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
+      transition: .35s;
     }
   }
 }

@@ -391,3 +391,11 @@
   }
 }
 
+//Popup-city
+.popup-city {
+  max-width: 800px;
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+}

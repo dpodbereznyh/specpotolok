@@ -410,9 +410,9 @@
                     </ul>
                     <div class="main-nav__location">
                         <span class="icon-catalog-location-icon main-nav__location-icon"></span>
-                        <p class="main-nav__location-city base-font">
+                        <a href="#" class="main-nav__location-city base-font " data-fancybox data-src="#popup-city">
                             Владимир
-                        </p>
+                        </a>
                     </div>
                 </nav>
             </div>
@@ -745,7 +745,7 @@
                             <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
                             <input type="text" class="form__input" placeholder="Объем" name="value">
-                            <input type="checkbox" class=" form__checkbox" id="geography__form_assent">
+                            <input type="checkbox" class=" form__checkbox" id="geography__form_assent" checked required>
                             <label for="geography__form_assent" class="geography__form_label form__label">
                                 <span></span>
                                 <a href="#" class="small" target="_blank">
@@ -1063,7 +1063,7 @@
             </a>
         </div>
         <div class="d-none">
-            <div class="form__wrap" id="popup-form">
+            <div class="form__wrap form__wrap-popup" id="popup-form">
                 <div class="form__title">
                     <div class="form__title_icon">
                         <img src="../img/geography/calc-icon.svg" alt="">
@@ -1072,11 +1072,11 @@
                         Вызвать замерщика
                     </h3>
                 </div>
-                <form>
+                <form class="form-popup" method="post">
                     <input type="hidden" value="Заявка из шапки Вызвать замерщика" name="title" required="">
                     <input type="text" class="form__input" placeholder="Ваш имя*" name="name" required>
                     <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                    <input type="checkbox" class="form__checkbox" id="form__checkbox">
+                    <input type="checkbox" class="form__checkbox" id="form__checkbox" required checked>
                     <label for="form__checkbox" class="form__label product-form__label">
                         <span></span>
                         <a href="#" class="small" target="_blank">
@@ -1085,13 +1085,154 @@
                                     </span>
                         </a>
                     </label>
-                    <button class="geography__form_btn form__btn btn small">
+                    <button type="submit" class="geography__form_btn form__btn btn small">
                         вызвать
                     </button>
                 </form>
             </div>
             <div id="fancyalert" class="fancyalert">
                 <div class="fancyalert-text">Спасибо за заявку,<br> в ближайшее время с Вами свяжутся!</div>
+            </div>
+        </div>
+        <div class="d-none">
+            <div class="popup-city" id="popup-city">
+                <h3 class="popup-city__title h3">
+                    Выбрать другой город
+                </h3>
+                <ul class="cities__list">
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Александров
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Вязники
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Гороховец
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Гусь-Хрустальный
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Камешково
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Карабаново
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Киржач
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Ковров
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Кольчугино
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Костерево
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Курлово
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Лакинск
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Меленки
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Муром
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Петушки
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Покров
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Радужный
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Собинка
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Струнино
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Судогда
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Суздаль
+                        </a>
+                    </li>
+                    <li class="cities__item">
+                        <span></span>
+                        <a href="#" class="small">
+                            Юрьев-Польский
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

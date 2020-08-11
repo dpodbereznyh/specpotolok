@@ -453,11 +453,11 @@
                        <p class="form__description small">
                            Заполните поля ниже, и наши менеджеры обязательно свяжутся с Вами и ответят на все интересующие Вас вопросы
                        </p>
-                       <form class="geography__form">
+                       <form class="geography__form form" method="post">
                            <input type="hidden" value="Заявка из формы Заказать натяжной потолок" name="title" required="">
                            <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                            <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                           <input type="checkbox" class="form__checkbox" id="form__assent">
+                           <input type="checkbox" class="form__checkbox" id="form__assent" checked required>
                            <label for="form__assent" class="form__label">
                                <span></span>
                                <a href="#" class="small" target="_blank">
@@ -467,7 +467,7 @@
                                    персональных данных
                                </a>
                            </label>
-                           <button class="geography__form_btn form__btn btn small">
+                           <button type="submit" class="geography__form_btn form__btn btn small">
                                получить стоимость
                            </button>
                        </form>
@@ -860,11 +860,11 @@
                                 Заказать натяжной потолок
                             </h3>
                         </div>
-                        <form>
+                        <form class="form" method="post">
                             <input type="hidden" value="Заявка из формы Заказать натяжной потолок" name="title" required="">
                             <input type="text" class="form__input" placeholder="Ваш имя*" name="name" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                            <input type="checkbox" class="form__checkbox" id="form__checkbox">
+                            <input type="checkbox" class="form__checkbox" id="form__checkbox" required checked>
                             <label for="form__checkbox" class="form__label product-form__label">
                                 <span></span>
                                 <a href="#" class="small" target="_blank">
@@ -873,7 +873,7 @@
                                     </span>
                                 </a>
                             </label>
-                            <button class="geography__form_btn form__btn btn small">
+                            <button type="submit" class="geography__form_btn form__btn btn small">
                                 получить стоимость
                             </button>
                         </form>
