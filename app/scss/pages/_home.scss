@@ -32,9 +32,9 @@
     top: 50%;
     left: 100px;
     transform: translate(0, -50%);
-    span {
-      color: $orange;
-    }
+  }
+  &__title-akcent {
+    color: $orange;
   }
   &__swiper-container {
     position: relative;
