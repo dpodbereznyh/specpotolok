@@ -22,7 +22,13 @@
             <ul class="header__top_nav">
                 <li class="header__top_nav_item">
                     <a href="/" class="header__logo">
-                        <img src="../img/header/header-logo.svg" alt="СПЕЦПОТОЛОК">
+                        <div class="header__logo_image">
+                            <img src="../img/header/logotipe.svg" alt="СПЕЦПОТОЛОК">
+                        </div>
+                        <p class="header__logo_text">
+                            Спецпотолок.ру<br>
+                            <span>установка натяжных потолков</span>
+                        </p>
                     </a>
                 </li>
                 <li class="header__top_nav_item">
@@ -66,7 +72,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="header__top_nav_item">
+                <li class="header__top_nav_item header__top_nav_item-feedback">
                     <ul class="header__top_nav_feedback">
                         <li class="header__top_nav_feedback-item header__top_nav_feedback-item-mail">
                             <div class="header__top_nav_item-icon">
@@ -407,6 +413,11 @@
                                 Контакты
                             </a>
                         </li>
+                        <div class="menu_feedback-btn">
+                            <a href="#" class="btn small js-callback" data-fancybox data-src="#popup-form" data-title="Вызвать замерщика">
+                                ВЫЗОВ ЗАМЕРЩИКА
+                            </a>
+                        </div>
                     </ul>
                     <div class="main-nav__location">
                         <span class="icon-catalog-location-icon main-nav__location-icon"></span>
@@ -759,22 +770,23 @@
                                 Рассчитать стоимость
                             </h3>
                         </div>
-                        <form>
+                        <form class="form" method="post" >
                             <input type="hidden" value="Заявка из формы Расчитать стоимость" name="title" required="">
                             <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                            <input type="text" class="form__input" placeholder="Объем" name="value">
-                            <input type="checkbox" class=" form__checkbox" id="geography__form_assent" checked required>
-                            <label for="geography__form_assent" class="geography__form_label form__label">
-                                <span></span>
-                                <a href="#" class="small" target="_blank">
-                                    <span class="small">
+                            <label class="form__label" for="checkbox">
+                                <input type="checkbox" id="checkbox" class="form__checkbox" checked required>
+                                <span class="form__checkbox-span"></span>
+                                <div class="form__label_accept">
+                                    <span class="small form__label_text">
                                         Даю согласие на обработку
                                     </span>
-                                    персональных данных
-                                </a>
+                                    <a href="{50 | url}" target="_blank" class="small form__label_link" target="_blank">
+                                        персональных данных
+                                    </a>
+                                </div>
                             </label>
-                            <button class="geography__form_btn form__btn btn small">
+                            <button type="submit" class="geography__form_btn form__btn btn small">
                                 получить стоимость
                             </button>
 
@@ -970,7 +982,7 @@
                     ВЫЗВАТЬ БЕСПЛАТНО ЗАМЕРЩИКА
                 </h3>
             </div>
-            <form class="main-callback__form">
+            <form class="main-callback__form form" method="post">
                 <div class="main-callback__form_wrap">
                     <input type="hidden" value="Заявка из формы Вызвать замерщика" name="title" required="">
                     <input class="main-callback__form_input small" type="text" placeholder="Имя" name="name">
@@ -979,14 +991,17 @@
                         ВЫЗВАТЬ ЗАМЕРЩИКА
                     </button>
                 </div>
-                <input type="checkbox" id="main-callback__form_assent" class="main-callback__form_checkbox">
-                <label class="main-callback__form_label" for="main-callback__form_assent">
-                    <a href="#" target="_blank" class="small">
-                        Даю согласие на обработку
-                        <span class="small">
-                             персональных данных
-                        </span>
-                    </a>
+                <label class="main-callback__form_label" >
+                    <input type="checkbox" class="main-callback__checkbox" checked required>
+                    <span class="main-callback__checkbox-span"></span>
+                    <div class="form__label_accept">
+                                    <span class="small main-callback__form_label_text">
+                                        Даю согласие на обработку
+                                    </span>
+                        <a href="#" target="_blank" class="small main-callback__form_label_link">
+                            персональных данных
+                        </a>
+                    </div>
                 </label>
             </form>
         </div>
@@ -1095,14 +1110,14 @@
                     <input type="hidden" value="Заявка из шапки Вызвать замерщика" name="title" required="">
                     <input type="text" class="form__input" placeholder="Ваш имя*" name="name" required>
                     <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                    <input type="checkbox" class="form__checkbox" id="form__checkbox" required checked>
-                    <label for="form__checkbox" class="form__label product-form__label">
-                        <span></span>
-                        <a href="#" class="small" target="_blank">
-                                    <span class="small">
+                    <label class="form__label">
+                        <input type="checkbox" class="form__checkbox" checked required>
+                        <span class="form__checkbox-span"></span>
+                        <div class="form__label_accept">
+                                    <span class="small form__label_text">
                                         Согласен на обработку персональных данных, ознакомлен с политикой конфиденциальности
                                     </span>
-                        </a>
+                        </div>
                     </label>
                     <button type="submit" class="geography__form_btn form__btn btn small">
                         вызвать

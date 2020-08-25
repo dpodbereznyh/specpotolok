@@ -51,7 +51,7 @@ $sm-clean__border-radius:								5px !default;
 
 // Menu box
 $sm-clean__collapsible-bg:								$sm-clean__gray !default;
-$sm-clean__collapsible-border-radius:					$sm-clean__border-radius !default;
+$sm-clean__collapsible-border-radius:					0px !default;
 
 // Items
 $sm-clean__collapsible-item-color:						$sm-clean__gray-darker !default;
@@ -523,7 +523,7 @@ $sm-clean__toggle-spacing: floor($sm-clean__item-height * 0.1);
 		// Main menu box
 		&.sm-vertical {
 			padding: $sm-clean__desktop-vertical-padding-vertical 0;
-			border-radius: $sm-clean__desktop-vertical-border-radius;
+			border-radius: 0px;
 
 			// Main menu items
 			a {

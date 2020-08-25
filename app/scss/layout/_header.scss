@@ -8,12 +8,30 @@
   &__logo {
     width: 283px;
     height: 78px;
-    display: block;
+    display: flex;
+    align-items: center;
+  }
+  &__logo_image {
+    width: 78px;
+    height: 78px;
+    margin-right: 4px;
     img {
       max-width: 100%;
       width: 100%;
       height: auto;
       display: inline-block;
+    }
+  }
+  &__logo_text {
+    color: $blue_d2;
+    text-transform: uppercase;
+    line-height: 15px;
+    font-weight: 800;
+    font-size: 18px;
+    span {
+      color: $orange;
+      font-size: 10px;
+      font-weight: 800;
     }
   }
   &__top_nav_item {
@@ -97,8 +115,16 @@
   }
 }
 @media screen and (max-width: 698.5px) {
-  .header__top_nav_feedback {
+  .header__top_nav_feedback-item-mail {
     display: none;
+  }
+  .header__top_nav_item-feedback {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  .header__top_nav {
+    flex-wrap: wrap;
   }
   //.header__top_nav_item {
   //  margin-left: auto;
@@ -110,5 +136,8 @@
   }
   .header__logo {
     margin-bottom: 32px;
+  }
+  .header__top_nav_item-feedback {
+    justify-content: center;
   }
 }

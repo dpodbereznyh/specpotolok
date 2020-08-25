@@ -457,15 +457,17 @@
                            <input type="hidden" value="Заявка из формы Заказать натяжной потолок" name="title" required="">
                            <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                            <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                           <input type="checkbox" class="form__checkbox" id="form__assent" checked required>
-                           <label for="form__assent" class="form__label">
-                               <span></span>
-                               <a href="#" class="small" target="_blank">
-                                    <span>
+                           <label class="form__label">
+                               <input type="checkbox" class="form__checkbox" checked required>
+                               <span class="form__checkbox-span"></span>
+                               <div class="form__label_accept">
+                                    <span class="small form__label_text">
                                         Даю согласие на обработку
                                     </span>
-                                   персональных данных
-                               </a>
+                                   <a href="{50 | url}" target="_blank" class="small form__label_link" target="_blank">
+                                       персональных данных
+                                   </a>
+                               </div>
                            </label>
                            <button type="submit" class="geography__form_btn form__btn btn small">
                                получить стоимость
@@ -504,16 +506,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="master-call__phone">
-                <div class="master-call__bg">
-                    <img src="" alt="">
-                </div>
+            <div class="master-call__phone"></div>
+            <div class="master-call__phone_wrap">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="offset-lg-4 col-lg-8">
-                            <div class="master-call__phone_wrap">
+                        <div class="offset-lg-3 col-lg-9">
+                            <div class="master-call__phone_inner">
                                 <div class="master-call__phone_icon">
                                     <img src="../img/master-call/phone-icon.svg" alt="">
                                 </div>
@@ -864,14 +863,14 @@
                             <input type="hidden" value="Заявка из формы Заказать натяжной потолок" name="title" required="">
                             <input type="text" class="form__input" placeholder="Ваш имя*" name="name" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
-                            <input type="checkbox" class="form__checkbox" id="form__checkbox" required checked>
-                            <label for="form__checkbox" class="form__label product-form__label">
-                                <span></span>
-                                <a href="#" class="small" target="_blank">
-                                    <span class="small">
+                            <label class="form__label">
+                                <input type="checkbox" class="form__checkbox" checked required>
+                                <span class="form__checkbox-span"></span>
+                                <div class="form__label_accept">
+                                    <span class="small form__label_text">
                                         Согласен на обработку персональных данных, ознакомлен с политикой конфиденциальности
                                     </span>
-                                </a>
+                                </div>
                             </label>
                             <button type="submit" class="geography__form_btn form__btn btn small">
                                 получить стоимость
@@ -985,3 +984,23 @@
 
 </body>
 </html>
+
+<!--<div class="master-call__phone">-->
+<!--    <div class="master-call__bg">-->
+
+<!--    </div>-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="row">-->
+<!--            <div class="offset-lg-4 col-lg-8">-->
+<!--                <div class="master-call__phone_wrap">-->
+<!--                    <div class="master-call__phone_icon">-->
+<!--                        <img src="assets/app/img/master-call/phone-icon.svg" alt="">-->
+<!--                    </div>-->
+<!--                    <a href="tel: {$_modx->config.callmasternum}" class="h1">-->
+<!--                         {$_modx->config.callmaster}-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

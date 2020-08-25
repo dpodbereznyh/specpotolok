@@ -471,7 +471,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="form__wrap">
+                    <div class="form__wrap form__contacts">
                         <div class="form__title form__title_margin">
                             <h3 class=" h3">
                                 Остались вопросы?
@@ -479,7 +479,7 @@
                         </div>
                         <div class="form__subtitle">
                             <div class="form__subtitle_icon">
-                                <img src="../img/contacts/messege-icon.svg" alt="">
+                                <img src="assets/app/img/contacts/messege-icon.svg" alt="">
                             </div>
                             <p class="form__subtitle_text strong">
                                 Напишите нам
@@ -490,15 +490,18 @@
                             <input type="text" class="form__input" placeholder="Ваш город*" name="city" required>
                             <input type="tel" class="form__input" placeholder="Ваш телефон*" name="phone" required>
                             <input type="text" class="form__input" placeholder="Сообщение" name="comment">
-                            <input type="checkbox" class="form__checkbox" id="form__assent" checked required>
-                            <label for="form__assent" class="form__label geography__form_label">
-                                <span></span>
-                                <a href="#" class="small" target="_blank">
-                                    <span>
+                            <input type="text" class="form__input" placeholder="Объем" name="value">
+                            <label class="form__label" for="checkbox">
+                                <input type="checkbox" id="checkbox" class="form__checkbox" checked required>
+                                <span class="form__checkbox-span"></span>
+                                <div class="form__label_accept">
+                                    <span class="small form__label_text">
                                         Даю согласие на обработку
                                     </span>
-                                    персональных данных
-                                </a>
+                                    <a href="{50 | url}" target="_blank" class="small form__label_link" target="_blank">
+                                        персональных данных
+                                    </a>
+                                </div>
                             </label>
                             <button type="submit" class="geography__form_btn form__btn btn small">
                                 получить стоимость
