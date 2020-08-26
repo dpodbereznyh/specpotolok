@@ -67,13 +67,38 @@
   }
   &__logo {
     max-width: 323px;
-    a {
+
+  }
+  &__logo_image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__logo_image_wrap {
+    width: 78px;
+    height: 78px;
+    margin-right: 4px;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
       display: block;
-      margin-bottom: 32px;
     }
-    p {
-      color: $light;
+  }
+  &__logo_text {
+    color: #5178a5;
+    text-transform: uppercase;
+    line-height: 15px;
+    font-weight: 800;
+    font-size: 18px;
+    span {
+      color: #ff7c24;
+      font-size: 10px;
+      font-weight: 800;
     }
+  }
+  &__logo_description {
+    color: $light;
   }
 }
 .copyright {

@@ -12,11 +12,11 @@
       height: auto;
       display: block;
     }
-    &:hover .catalog-list__text {
-      color: $orange-d3;
-      transition: .35s;
-      background: #999999bd;
-    }
+    //&:hover .catalog-list__text {
+    //  color: $orange-d3;
+    //  transition: .35s;
+    //  background: #999999bd;
+    //}
   }
   &__text {
     position: absolute;
