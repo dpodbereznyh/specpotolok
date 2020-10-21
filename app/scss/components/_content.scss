@@ -69,26 +69,28 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
-    margin-bottom: 32px;
+    margin: 32px 0 16px;
   }
   h3 {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 23px;
-    margin-bottom: 32px;
+    margin: 16px 0 16px;
   }
   h4 {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
+    margin: 16px 0 16px;
   }
   h5 {
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
+    margin: 16px 0 16px;
   }
   h6 {
     font-style: normal;
@@ -100,7 +102,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 23px;
   }
   a {
     font-style: normal;
@@ -116,6 +118,12 @@
     max-width: 100%;
     height: auto;
     width: auto;
+  }
+  ul {
+    list-style-type: disc;
+    li {
+      margin: 0 0 16px 16px;
+    }
   }
 }
 @media screen and (max-width: 730.5px) {
